@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  background: url('cream-dust.png');
+  color: #e6e6e6;
+}
+nav {
+  padding: 2em 0;
+}
+.nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.nav-item {
+  flex: 0 1 15%;
+  text-align: right;
+  align-self: center;
+  font-family: "homiz";
+  font-size: 2em;
+}
+a.nav-logo {
+  flex: 0 1 40%;
+  height: 40px;
+}

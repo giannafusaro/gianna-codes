@@ -1,0 +1,72 @@
+
+div.photos-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  $photo_paths:
+  "camcos1.jpg",
+  "camcos2.jpg",
+  "camcos3.jpg",
+  "ic3.jpg",
+  "apicon.jpg",
+  "pearson5.jpg",
+  "workshop.jpg",
+  "pearson1.jpg",
+  "pearson4.jpg",
+  "pearson3.jpg",
+  "pearson2.jpg",
+  "hsevent.jpg",
+  "pinger.jpg",
+  "awards2.JPG",
+  "awards3.JPG",
+  "awards1.jpg";
+
+  @for $i from 1 through length($photo_paths){
+    $path: nth($photo_paths, $i);
+    figure.photo-#{$i} {
+
+      background-image: url(photos/#{$path});
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  figure {
+    margin: 0;
+    height: 440px;
+    padding: 0;
+    width: 25%;
+
+  }
+}
+
+figure[data-width="two"] {
+  // width: 22%;
+  flex: 0 1 25%;
+}
+figure[data-width="one"] {
+  // width: 66%;
+  flex: 0 1 50%;
+}
+figure[data-width="three"] {
+  // width: 32%;
+  flex: 0 1 33.33333333333%;
+}
+// .medium {
+//   width: 49%;
+// }
+// .large {
+//   width: 49%;
+//   img {
+//     width: 500px;
+//   }
+// }
+//
+// .xlarge {
+//   width: 100%;
+//   img {
+//     width: 800px;
+//   }
+// }

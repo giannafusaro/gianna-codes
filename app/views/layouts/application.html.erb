@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GiannaCodes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <%= link_to home_path, class: 'nav-logo' do %>
+        <%= inline_svg('gianna-codes-lightning-green.svg', class: "logo") %>
+      <% end %>
+      <%= link_to "projects", projects_path, class: "nav-item" %>
+      <%= link_to "blog", blog_path, class: "nav-item" %>
+      <%= link_to "gallery", projects_path, class: "nav-item" %>
+      <%= link_to "contact", contact_path, class: "nav-item" %>
+    </div>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
