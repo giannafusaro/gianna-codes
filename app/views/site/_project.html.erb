@@ -1,0 +1,8 @@
+<%= link_to("#{content[:link]}", class: "project-link project-#{path[0..-5]}" ) do %>
+  <figure>
+    <figcaption>
+      <div class="front project-<%= "#{path[0..-5]}" %>"></div>
+      <div class="back"></div>
+    </figcaption>
+  </figure>
+<% end %>

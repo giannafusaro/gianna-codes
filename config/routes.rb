@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'site#home', as: :home
   get '/projects' => 'site#projects', as: :projects
   get '/blog' => 'site#blog', as: :blog
+  get '/gallery' => 'site#gallery', as: :gallery
   get '/contact' => 'site#contact', as: :contact
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

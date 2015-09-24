@@ -1,0 +1,32 @@
+body.gallery {
+  div.media-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 2em;
+    $media: camcos1, camcos2, camcos3, ic3, apicon, pearson5, workshop, pearson1, pearson4, pearson3, pearson2, hsevent, pinger, awards2, awards3, awards1;
+    @each $medium in $media {
+
+      // look for element with id of path so i when i change order
+      // i only have to change in one place
+      #{'figure#' + $medium} {
+        background-image: url("photos/#{$medium}");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  figure {
+    height: 440px;
+  }
+  .half {
+    flex: 0 1 50%;
+  }
+  .quarter {
+    flex: 0 1 25%;
+  }
+  .third {
+    flex: 0 1 33.333333%;
+  }
+}

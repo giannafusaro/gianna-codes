@@ -1,0 +1,7 @@
+<div class="media-container">
+  <% @media.each_with_index do |(path, media), index| %>
+  <% logger.debug "path #{media}" %>
+  <% logger.debug "value #{media}" %>
+    <%= render partial: "#{media[:type]}", locals: { path: path, media: media, index: index } %>
+  <% end %>
+</div>

@@ -1,7 +1,7 @@
-<div class="photos-container">
-  <% photo_orders.each_with_index do |(path, value), index| %>
+<div class="projects-container">
+  <% @projects.each_with_index do |(path, content), index| %>
   <% logger.debug "path #{path}" %>
-  <% logger.debug "value #{value}" %>
-  <%= render partial: "photo", locals: { path: path, value: value, index: index } %>
+  <% logger.debug "content #{content}" %>
+    <%= render partial: "project", locals: { path: path, content: content, index: index } %>
   <% end %>
 </div>

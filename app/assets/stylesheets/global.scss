@@ -5,6 +5,7 @@ a {
 body {
   background: url('cream-dust.png');
   color: #e6e6e6;
+  padding: 0em 2em;
 }
 nav {
   padding: 2em 0;
@@ -12,16 +13,146 @@ nav {
 .nav-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 4em;
 }
 .nav-item {
   flex: 0 1 15%;
-  text-align: right;
+  text-align: center;
   align-self: center;
   font-family: "homiz";
+  font-size: 1.8em;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-item.active,
+.nav-item:hover,
+.nav-item:focus {
+  color: #bbb;
+  &:before {
+    color: #333;
+    text-shadow: 10px 0 #333, -10px 0 #333;
+  }
+}
+.nav-item:before {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  color: transparent;
+  content: '.';
+  text-shadow: 0 0 transparent;
   font-size: 2em;
+  transition: text-shadow 0.3s, color 0.3s;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 a.nav-logo {
-  flex: 0 1 40%;
+  // flex: 0 1 40%;
+  position: absolute;
   height: 40px;
+  width: 40%;
+  top: -5em;
+  left: 30%;
 }
+
+figure,
+.vid-container {
+  margin: 0;
+  padding: 0;
+}
+
+#svg-polygon-outer,
+#svg-path-inner {
+  animation: change-color-inner 10s cubic-bezier(.17,.67,.83,.67) infinite;
+  animation-play-state: paused;
+  animation-direction: alternate;
+}
+#svg-path-outer,
+#svg-polygon-inner {
+  animation: change-color-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
+  animation-play-state: paused;
+  animation-direction: alternate;
+}
+.nav-logo:hover {
+  #svg-polygon-outer,
+  #svg-path-inner,
+  #svg-path-outer,
+  #svg-polygon-inner {
+  animation-play-state: running;
+}}
+
+@keyframes change-color-outer {
+  0% {
+    fill: #5BD59B;
+    stroke: #5BD59B;
+  }
+  20% {
+    fill: #428CBD;
+    stroke: #428CBD;
+  }
+  40% {
+    fill: #945BD5;
+    stroke: #945BD5;
+  }
+  100% {
+    fill: #f06d6c;
+    stroke: #f06d6c;
+
+  }
+  60% {
+     fill: #A33A39;
+     stroke: #A33A39;
+  }
+  80% {
+     fill: #F0723C;
+     stroke: #F0723C;
+  }
+}
+@keyframes change-color-inner {
+  0% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  20% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  40% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  100% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  60% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  80% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+
+}
+
+$colors:
+#5BD59B, #8fdab4, #27d085,
+#27D085, #5bd59b, #15a96c,
+#f06d6c, #f0a5a5, #f5362e,
+#FF4136, #f87976, #fc1600,
+#A33A39, #b85d5d, #802723,
+#F2F285, #f4f2bc, #f0f549,
+#428CBD, #75a6c3, #2a6b9c,
+#29A34D, #43c265, #177c38,
+#C85B5A, #cf8c8c, #b93530,
+#1C4F70, #307095, #0d2e46,
+#6CF093, #a5f0b9, #2ef56f,
+#F0723C, #ed9778, #ed5306,
+#6BBD42, #92c375, #4c9c2a,
+#A9F2AA, #ddf8dc, #70f276,
+#945BD5, #b08fda, #7b27d0
