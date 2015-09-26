@@ -1,7 +1,5 @@
 <div class="projects-container">
   <% @projects.each_with_index do |(path, content), index| %>
-  <% logger.debug "path #{path}" %>
-  <% logger.debug "content #{content}" %>
     <%= render partial: "project", locals: { path: path, content: content, index: index } %>
   <% end %>
 </div>

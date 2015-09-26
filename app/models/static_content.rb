@@ -4,17 +4,17 @@ class StaticContent
   ################################################################################
 
   PROJECTS = {
-    'camcos1.png' => {
-      title: 'NASA Ames Sponsored Research Presentation',
-      subtitle: 'Center for Applied Mathematics, Computation and Statistics',
+    'camcos.jpg' => {
+      title: 'CAMCOS presentation',
+      subtitle: 'NASA Ames Sponsored Research Project for SJSU Center for Applied Mathematics, Computation and Statistics',
       link: 'http://docs.google.com/presentation/d/1JIn8F6iX8oiSq-atBk6yh4VomD40Inf3GeRIxAUlMdU/edit?usp=sharing'
     },
-    'camcos2.png' => {
-      title: 'NASA Ames Sponsored Research Report',
-      subtitle: 'Center for Applied Mathematics, Computation and Statistics',
+    'presentation2d_bayseian_components.jpg' => {
+      title: 'CAMCOS report',
+      subtitle: 'NASA Ames Sponsored Research Project for SJSU Center for Applied Mathematics, Computation and Statistics',
       link: 'http://www.slideshare.net/GiannaFusaro/writtenreportmath203v2'
     },
-    'isports.png' => {
+    'isports-bg.jpg' => {
       title: 'iSportsDevelopment',
       subtitle: 'Hockey coach-student video conferencing',
       link: 'http://isportsdevelopment.com'
@@ -29,18 +29,18 @@ class StaticContent
       subtitle: 'Dog grooming salon static webpage',
       link: 'http://www.superpups.biz'
     },
-    'supportme.png' => {
+    'support-me.jpg' => {
       title: 'SupportMe',
       subtitle: 'APIcon Hackathon winner: Connecting people who need support',
       link: 'http://challengepost.com/giannafusaro'
     },
-    'fixstop.png' => {
+    'fix-stop.jpg' => {
       title: 'FixStop',
       subtitle: 'Mock appointment scheduling',
       link: 'https://github.com/giannafusaro/ComputerRepairStore'
     },
-    'pearson.png' => {
-      title: 'STEM NOW Inspiring Women to Become Technology Designers',
+    'pearson-markers.jpg' => {
+      title: 'STEM NOW: Inspiring Women to Become Technology Designers',
       subtitle: 'An article I wrote for Pearson Education',
       link: 'http://www.pearsoned.com/education-blog/stem-now-inspiring-women-to-become-technology-designers/'
     },
@@ -48,12 +48,13 @@ class StaticContent
       title: 'STEM NOW',
       subtitle: 'SJSU organization to promote diversity in tech',
       link: 'http://www.stem-now.org/'
-    },
-    'cloudnow2.png' => {
-      title: 'CloudNow',
-      subtitle: 'Top women in college',
-      link: 'http://insights.wired.com/profiles/blogs/how-to-take-advantage-of-the-first-top-college-women-in-cloud#axzz3VBvklkvv'
     }
+    # ,
+    # 'cs-women.jpg' => {
+    #   title: 'CloudNow',
+    #   subtitle: 'Top women in college',
+    #   link: 'http://insights.wired.com/profiles/blogs/how-to-take-advantage-of-the-first-top-college-women-in-cloud#axzz3VBvklkvv'
+    # }
   }
 
   ################################################################################

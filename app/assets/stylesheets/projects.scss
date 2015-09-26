@@ -3,73 +3,104 @@ body.site.projects {
     display: flex;
     flex-flow: row wrap;
     margin-top: 2em;
+    justify-content: center;
   }
-  $projects: camcos1, camcos2, cloudnow2, fixstop, isports, ottos, pearson, stemnow, superpups, supportme;
-  @each $project in $projects {
-
-    // look for element with id of path so i when i change order
-    // i only have to change in one place
-    #{'.project-' + $project} {
-      background-image: url("projects/#{$project}");
-      background-position: center;
-      background-repeat: no-repeat;
-      &:hover,
-      &:focus {
-        figcaption {
-          transform: rotate3d(0,1,0, 180deg);
-        }
-        figure {
-          background-image: url("cream-dust");
-          background-color: #FAFAFA;
-          box-shadow: 0 0 0 0 rgba(255,255,255,0.8), inset 0 0 3px #bbb;
 
 
-        }
+  img.project-pic {
+    opacity: 0.9;
+    transition: opacity 0.35s;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    -webkit-filter: invert(0.3);
+
+    top: 0;
+    left: 0;
+  }
+  figcaption {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    backface-visibility: hidden;
+    &:before {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      bottom: 30px;
+      left: 30px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale3d(1.4,1.4,1);
+      transform: scale3d(1.4,1.4,1);
+    }
+  }
+  a.project-link {
+    height: 350px;
+    width: 350px;
+    z-index: 5;
+    position: absolute;
+    top: 0; bottom: 0; left:0; right: 0;
+  }
+  figure {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 350px;
+    width: 48%;
+    background: #030c17;
+
+
+    &:hover,
+    &:focus {
+      figcaption {
+        background-color: rgba(58,52,42,0);
+      }
+      img.project-pic {
+        opacity: 0.4;
+      }
+      h2 {
+
+        transform: scale(0.9) translateY(-3em);
+        // padding: 0em 1em;
+      }
+      figcaption:before,
+      p {
+        opacity: 1;
+        transform: scale3d(1,1,1);
       }
     }
   }
-
-  a.project-link {
-    height: 260px;
-    width: 260px;
-    position: relative;
-    border-radius: 50%;
+  p {
+    padding: 1em 3em;
+    opacity: 0;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    letter-spacing: 1px;
+    font-size: 68.5%;
+    margin: 0;
+    transform: scale(1.5);
+    font-family: 'glober';
   }
-  figcaption {
-    height: 200px;
-    width: 200px;
-    transform-style: preserve-3d;
-    transition: all 0.4s ease-in-out;
-    border-radius: 50%;
-
-
-  }
-    div.front, div.back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    display: block;
-    border-radius: 50%;
-    background-position: center center;
-  }
-  div.back {
-    transform: rotate3d(0,1,0, 180deg);
-    background-color: rgba(51, 51, 51, 0.28);
-  }
-  figure {
-    top: 30px;
-    left: 30px;
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    perspective: 800px;
-    border-radius:50%;
-    transition: transform, box-shadow 0.4s ease-in-out;
-    box-shadow: 0 0 0 30px rgba(51, 51, 51, 0.5), inset 0 0 3px #333;
-
-    // background-image: url('cream-dust');
-    // background-color: #FAFAFA;
-
+  h2 {
+    transition: transform 0.35s;
+    margin: 50% 5% -50px 5%;
+    // font-family: 'glober';
+    font-family: 'code';
+    text-shadow: 0px 0px 1px white;
+    letter-spacing: 2px;
+    font-size: larger;
+    // padding: 3em 1em;
   }
 }
