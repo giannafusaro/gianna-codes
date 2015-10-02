@@ -5,7 +5,7 @@ require 'awesome_print'
 
 
 colors =
-  ["945BD5","5BD59B", "27D085","f06d6c", "FF4136", "A33A39",
+  ["6C7A89", 'ABB7B7', 'DADFE1', 'C8F7C5', "945BD5","5BD59B", "27D085","f06d6c", "FF4136", "A33A39",
   "F2F285", "428CBD", "29A34D", "C85B5A",
   "1C4F70", "6CF093", "BD6742", "F0723C",
   "6BBD42", "A9F2AA", "8A7B75"]
