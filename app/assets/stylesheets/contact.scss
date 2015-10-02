@@ -1,0 +1,29 @@
+body.site.contact {
+  section.contact {
+    margin-top: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    a {
+      display: flex;
+      &:hover {
+        svg.contact-icon, svg.contact-icon.outer {
+          animation-play-state: running;
+        }
+      }
+    }
+  }
+  svg.contact-icon {
+    height: 250px;
+    align-self: center;
+    animation: change-color-contact 10s cubic-bezier(.17,.67,.83,.67) infinite;
+    animation-play-state: paused;
+    animation-direction: alternate;
+  }
+  svg.contact-icon.outer {
+    animation: change-color-contact-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
+    animation-play-state: paused;
+    animation-direction: alternate;
+
+  }
+}

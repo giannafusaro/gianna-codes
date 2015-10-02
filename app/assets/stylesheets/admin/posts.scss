@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 2em;
+
+  .title,
+  .img-url {
+    flex: 0 1 40%;
+  }
+  .author,
+  .date {
+    flex: 0 1 40%;
+  }
+  .abstract {
+    flex: 0 1 90%;
+  }
+  input {
+    flex: 1;
+  }
+  textarea {
+    width: 103%;
+    border-radius: 4px;
+    border: solid silver;
+  }
+}
+div#editor {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+.header span {
+  display: flex;
+}
+.header > .label {
+  font-family: 'homiz';
+  letter-spacing: 1px;
+  font-size: '1.5em';
+}
+
+.header span > input, textarea {
+  font-family: 'courier';
+  font-size: '1.5em';
+  margin-bottom: 1em;
+}
+.submit-wrapper {
+  width: 100%;
+  text-align: center;
+}
+input[type=submit] {
+  width: 40%;
+  font-family: 'courier';
+  background-color: #5BD59B;
+  &:hover {
+    background-color: #27D085;
+  }
+}

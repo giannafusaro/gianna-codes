@@ -1,14 +1,25 @@
 a {
   text-decoration: none;
   color: #333;
+  cursor: pointer;
 }
 body {
   background: url('cream-dust.png');
-  color: #e6e6e6;
+  color: #333;
   padding: 0em 2em;
 }
 nav {
   padding: 2em 0;
+}
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: #333;
+  ;
 }
 .nav-container {
   display: flex;
@@ -137,7 +148,63 @@ figure,
      fill: #ed5306;
      stroke: #ed5306;
   }
+}
 
+@keyframes change-color-contact {
+  0% {
+    fill: #333;
+    stroke: #333;
+  }
+  20% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  40% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  100% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  60% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  80% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+}
+
+@keyframes change-color-contact-outer {
+  0% {
+    fill: #ABB7B7;
+    stroke: #ABB7B7;
+  }
+  20% {
+    fill: #428CBD;
+    stroke: #428CBD;
+  }
+  40% {
+    fill: #945BD5;
+    stroke: #945BD5;
+  }
+  100% {
+    fill: #f06d6c;
+    stroke: #f06d6c;
+
+  }
+  60% {
+     fill: #A33A39;
+     stroke: #A33A39;
+  }
+  80% {
+     fill: #F0723C;
+     stroke: #F0723C;
+  }
 }
 
 $colors:
@@ -156,3 +223,10 @@ $colors:
 #6BBD42, #92c375, #4c9c2a,
 #A9F2AA, #ddf8dc, #70f276,
 #945BD5, #b08fda, #7b27d0
+
+
+
+// "#6C7A89","#94979a","#4a5c72",
+// "#ABB7B7", "#cecece", "#83a5a6",
+// "#DADFE1","#fafafa", "#b5c5cd",
+// "#C8F7C5", "#f8fdf8", "#90f68d"

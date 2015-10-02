@@ -1,0 +1,49 @@
+.admin.nav-item {
+
+  span {
+    border-color: inherit;
+    transition: background 0.2s, border-color 0.2s;
+    overflow: hidden;
+    position: relative;
+    color: #333;
+  }
+  .options {
+    opacity: 0;
+    font-size: 0.75em;
+    transition: opacity 0.2s, visibility 0s 0.2s;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: #e6e6e6;
+    visibility: hidden;
+  }
+  li {
+    padding: 1em;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+div.admin.nav-item:hover {
+
+  background: #e6e6e6;
+
+  .options {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+}
+.options ul > li {
+  padding: 1em;
+  cursor: pointer;
+  text-align:left;
+  &:hover {
+    background: #bbb;
+  }
+}
+h1 {
+  font-family: 'glober';
+}
