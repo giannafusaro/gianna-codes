@@ -1,0 +1,11 @@
+<article class="post">
+<div class="heading">
+  <div class="img-container">
+    <%= image_tag "#{post.img_url}", class: "post-img" %>
+  </div>
+  <%= link_to post_path(post.url_title) do %>
+    <h1><%= post.title %></h1>
+  <% end %>
+  <h2><%= post.abstract %></h2>
+</div>
+</article>

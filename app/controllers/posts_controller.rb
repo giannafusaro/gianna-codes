@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   def show
-    @post = Post.find params[:url_title]
+    @post = Post.find_by(url_title: params[:url_title])
   end
 
   private

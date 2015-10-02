@@ -1,0 +1,19 @@
+<div class="header">
+  <span class="label title"><%= f.label :title %></span>
+	<span class="label img-url"><%= f.label :img_url %></span>
+
+	<span class="input-container title"><%= f.text_field :title %></span>
+  <span class="input-container img-url"><%= f.text_field :img_url %></span>
+
+	<span class="label author"><%= f.label :author %></span>
+	<span class="label date"><%= f.label :date %></span>
+
+  <span class="input-container author"><%= f.text_field :author %></span>
+  <span class="input-container date"><%= f.text_field :date %></span>
+
+  <span class="label abstract"><%= f.label :abstract %></span>
+  <span class="input-container abstract"><%= f.text_area :abstract, rows: 5 %></span>
+</div>
+<div id="editor" name="content"></div>
+<%= f.hidden_field :body, class: 'preview pretty-print' %>
+<div class="submit-wrapper"><%= f.submit %><div>
