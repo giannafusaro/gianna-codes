@@ -2,9 +2,16 @@ Rails.application.routes.draw do
 
   root 'site#home', as: :home
   get '/projects' => 'site#projects', as: :projects
-  get '/blog' => 'site#blog', as: :blog
+  get '/blog' => 'posts#index', as: :blog
   get '/gallery' => 'site#gallery', as: :gallery
   get '/contact' => 'site#contact', as: :contact
+  match '/admin' => 'admin#login', via: [:get, :post], as: :login
+  match '/logout' => 'admin#logout', via: [:get, :post], as: :logout
+  get '/post/:url_title' => 'posts#show', as: :post
+  namespace :admin do
+    resources :posts
+    get '/home' => 'site#home', as: :home
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body class="<%= "#{controller.controller_path} #{controller.action_name}" %>">
   <nav>
@@ -12,10 +13,12 @@
       <%= link_to home_path, class: 'nav-logo' do %>
         <%= inline_svg('gianna-codes-lightning-green.svg', class: "logo") %>
       <% end %>
-      <%= link_to "projects", projects_path, class: "nav-item #{"active" if current_page?(action: "projects")}", data: { hover: "projects" } %>
-      <%= link_to "blog", blog_path, class: "nav-item #{"active" if current_page?(action: "blog")}", data: { hover: "blog" } %>
-      <%= link_to "gallery", gallery_path, class: "nav-item #{"active" if current_page?(action: "gallery")}", data: { hover: "gallery" } %>
-      <%= link_to "contact", contact_path, class: "nav-item #{"active" if current_page?(action: "contact")}", data: { hover: "contact" } %>
+      <% if current_admin %>
+        <%= render partial: 'admin/navbar' %>
+      <% else %>
+        <%= render partial: 'site/navbar' %>
+      <% end %>
+
     </div>
   </nav>
 
