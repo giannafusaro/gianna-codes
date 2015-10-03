@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+FastSeeder.seed_csv!(Post, "posts.csv",	:title,	:date,	:author,	:abstract,	:body,	:img_url,	:url_title,	:created_at,	:updated_at)
+FastSeeder.seed_csv!(Admin, "admis.csv", :username,	:password_digest,	:created_at,	:updated_at)

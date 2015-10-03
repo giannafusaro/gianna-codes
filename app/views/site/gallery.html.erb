@@ -1,7 +1,5 @@
 <section class="media-container">
-  <% @media.each_with_index do |(path, media), index| %>
-  <% logger.debug "path #{media}" %>
-  <% logger.debug "value #{media}" %>
+  <% @media.each_with_index do |(path, media), index| %>  
     <%= render partial: "#{media[:type]}", locals: { path: path, media: media, index: index } %>
   <% end %>
 </section>

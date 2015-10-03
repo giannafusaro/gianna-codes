@@ -14,22 +14,22 @@
 ActiveRecord::Schema.define(version: 20150922223852) do
 
   create_table "admins", force: :cascade do |t|
-    t.string   "username",        null: false
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "username",        limit: 255, null: false
+    t.string   "password_digest", limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",      null: false
+    t.string   "title",      limit: 255,   null: false
     t.date     "date"
-    t.string   "author"
-    t.text     "abstract"
-    t.text     "body"
-    t.text     "img_url"
-    t.string   "url_title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "author",     limit: 255
+    t.text     "abstract",   limit: 65535
+    t.text     "body",       limit: 65535
+    t.text     "img_url",    limit: 65535
+    t.string   "url_title",  limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

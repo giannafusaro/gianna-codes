@@ -33,7 +33,9 @@ gem 'exifr'
 
 gem "wysiwyg-rails"
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.20'
+
+gem 'fast_seeder'
 
 group :production do
   # Use Unicorn as the app server

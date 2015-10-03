@@ -1,4 +1,4 @@
-APP_PATH = "/srv/gianna.codes"
+APP_PATH = "/srv/gianna-codes"
 
 ##############################################
 # Basic Configuration
