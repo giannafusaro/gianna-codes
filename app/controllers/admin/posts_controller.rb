@@ -14,8 +14,6 @@ class Admin::PostsController < ApplicationController
     @post = Post.new post_params
     if @post.save
       flash[:notice] = 'Post created successfully!'
-      logger.debug 'Post created successfully!'
-      logger.debug "#{flash[:notice]}, #{flash.inspect}"
       redirect_to admin_home_path
     else
       flash[:notice] = 'Sorry, something went wrong.'

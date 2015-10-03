@@ -14,6 +14,7 @@
     <h2>
       <span class="date"><%= @post.date.strftime('%B %d, %Y') %></span>
       <span>•</span><%= @post.abstract %></h2>
+      
       <pre class="froala-view body"><%= "#{@post.body}".html_safe %></pre>
 
   </div>

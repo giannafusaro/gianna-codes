@@ -1,0 +1,13 @@
+toolbar:
+  - core | fontselect| fontsizeselect| styleselect | bold italic | undo redo | code | charmap | preview
+  - image | link | hr | searchreplace | fullscreen | pastetext
+plugins:
+  - image
+  - link
+  - hr
+  - searchreplace
+  - code
+  - fullscreen
+  - charmap
+  - paste
+  - preview

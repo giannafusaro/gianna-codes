@@ -14,8 +14,16 @@ article.post {
   h1,
   h2,
   .froala-view {
+
     margin-left: auto;
     margin-right: auto;
+    li {
+      list-style-type: initial;
+    }
+    ul {
+      padding: 0em 3em;
+    }
+
   }
   h1,
   h2,

@@ -29,9 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'inline_svg'
 
-gem 'exifr'
-
-gem "wysiwyg-rails"
+gem 'tinymce-rails'
 
 gem 'mysql2', '~> 0.3.20'
 
