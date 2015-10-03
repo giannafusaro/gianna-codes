@@ -1,0 +1,43 @@
+body.site.home {
+  footer {
+    bottom: 0;
+  }
+  section.home {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 480px;
+  }
+  svg.gianna-icon {
+    height: 300px;
+    align-self: center;
+  }
+  div#dialogue-bubble-container {
+    position: relative;
+    font-family: 'homiz';
+    &:after {
+      content: "Hi, I'm Gianna.";
+      font-size: 2.5vw;
+      position: absolute;
+      top: 2.5em;
+      text-align: center;
+      width: 100%;
+    }
+    &:before {
+      position: absolute;
+      content: "Welcome to gianna codes, my portfolio showcasing how I spend most of my time. I love what I do, mostly because the realm of software exists at the nexus of creativity and logic. Thanks for stopping by!";
+      top: 8em;
+      text-align: center;
+      right: 2.5em;
+      line-height: 1.9em;
+      width: 290px;
+      font-size: 1.25vw;
+      width: 22vw;
+    }
+  }
+  i#dialogue-bubble {
+    font-size: 28vw;
+    color: #ddd;
+
+  }
+}
