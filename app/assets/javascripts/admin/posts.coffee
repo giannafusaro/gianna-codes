@@ -2,7 +2,7 @@
 init_editor = () ->
   console.log 'WOOT'
 
-  $('div#editor').editable
+  $('textarea.froala-view').editable
     inlineMode: false
     paragraphy: false
     placeholder: 'Upon inspiration, start typing...'
@@ -60,8 +60,9 @@ init_editor = () ->
       'sep'
       'fullscreen'
     ]
-
-    $('div#editor').on('editable.contentChanged editable.initialized', (e, editor) ->
+    linkAutoPrefix: 'http://'
+    noFollow: false
+    $('div.froala-view').on('editable.contentChanged editable.initialized', (e, editor) ->
       $('.preview').text editor.cleanTags(editor.getHTML())
       ).editable inlineMode: false
 
@@ -70,9 +71,11 @@ init_editor = () ->
 
 ready = ->
   init_editor()
+
   $(document).on "click", '.submit-wrapper', (ev) ->
     body = $('#post_body')[0]
-    body.value = body.innerText
+    body.value = $(".froala-view.f-basic")[0].innerHTML
+    console.log "body:", body.value
   $(".submit-wrapper").on('submit', )
   $("#new_post").on("ajax:success", (e, data, status, xhr) ->
     $("#new_post").replaceWith xhr.responseText

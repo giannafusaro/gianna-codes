@@ -1,3 +1,8 @@
 class Post < ActiveRecord::Base
-  serialize :body, JSON
+  before_save :create_url_title
+
+  private
+    def create_url_title
+      self.url_title = self.title.downcase.gsub(' ', '-')
+    end
 end

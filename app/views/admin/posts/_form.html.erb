@@ -14,6 +14,7 @@
   <span class="label abstract"><%= f.label :abstract %></span>
   <span class="input-container abstract"><%= f.text_area :abstract, rows: 5 %></span>
 </div>
-<div id="editor" name="content"></div>
+<%= f.text_area :body, class: 'froala-view', id: 'edit' %>
+
 <%= f.hidden_field :body, class: 'preview pretty-print' %>
 <div class="submit-wrapper"><%= f.submit %><div>

@@ -1,3 +1,5 @@
+<section>
 <% @posts.each do |post| %>
   <%= render partial: 'preview', locals: { post: post }, formats: :html %>
 <% end %>
+</section>

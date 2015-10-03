@@ -15,7 +15,7 @@ class Admin::PostsController < ApplicationController
     if @post.save
       flash[:notice] = 'Post created successfully!'
       logger.debug 'Post created successfully!'
-      # render_to_string action: 'edit'
+      logger.debug "#{flash[:notice]}, #{flash.inspect}"
       redirect_to admin_home_path
     else
       flash[:notice] = 'Sorry, something went wrong.'
@@ -25,6 +25,8 @@ class Admin::PostsController < ApplicationController
 
   def edit
     @post = Post.find params[:id]
+    logger.debug @post.inspect
+    @post
   end
 
   def update

@@ -1,11 +1,20 @@
-<article class="post">
-<div class="heading">
+<article class="post preview">
   <div class="img-container">
     <%= image_tag "#{post.img_url}", class: "post-img" %>
   </div>
-  <%= link_to post_path(post.url_title) do %>
+
+  <div class="preview-content-container">
+    <%= link_to post_path(post.url_title) do %>
     <h1><%= post.title %></h1>
-  <% end %>
-  <h2><%= post.abstract %></h2>
-</div>
+    <% end %>
+
+    <div class="author">by:
+      <%= post.author.upcase %></div>
+
+    <h2>
+      <span class="date"><%= post.date.strftime('%B %d, %Y') %></span>
+      <span>•</span><%= post.abstract %></h2>
+  </div>
+  <%= button_to "edit", edit_admin_post_path(post.id), method: 'get' if current_admin %>
+
 </article>

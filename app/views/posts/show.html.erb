@@ -1,11 +1,21 @@
 <article class="post">
- <div class="heading">
   <div class="img-container">
     <%= image_tag @post.img_url, class: "post-img" %>
   </div>
-  <h1><%= @post.title %></h1>
-  <h2><%= @post.abstract %></h2>
-</div>
+  <div class="content-container">
+    <%= button_to "edit", edit_admin_post_path(@post.id), method: 'get' if current_admin %>
 
-<pre class="froala-view body"><%= "#{@post.body}".html_safe %></pre>
+    <h1><%= @post.title %></h1>
+
+
+    <div class="author">by:
+      <%= @post.author.upcase %></div>
+
+    <h2>
+      <span class="date"><%= @post.date.strftime('%B %d, %Y') %></span>
+      <span>•</span><%= @post.abstract %></h2>
+      <pre class="froala-view body"><%= "#{@post.body}".html_safe %></pre>
+
+  </div>
+
 </article>

@@ -14,7 +14,7 @@ body.site.projects {
     position: absolute;
     width: 350px;
     height: 350px;
-    -webkit-filter: invert(0.3);
+    -webkit-filter: invert(0.2);
 
     top: 0;
     left: 0;
@@ -61,7 +61,7 @@ body.site.projects {
     max-width: 350px;
     max-height: 350px;
     width: 48%;
-    background: #030c17;
+    background: #101010;
 
 
     &:hover,
@@ -99,7 +99,7 @@ body.site.projects {
     margin: 50% 5% -50px 5%;
     // font-family: 'glober';
     font-family: 'code';
-    text-shadow: 0px 0px 1px white;
+    text-shadow: 1px 0px 1px white;
     letter-spacing: 2px;
     font-size: larger;
     // padding: 3em 1em;
