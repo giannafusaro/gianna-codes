@@ -8,13 +8,11 @@
   font-url("#{$filename}.svg") format('svg');
 }
 
-@font-face { @include custom-font('oran', 'Oranienbaum', 'normal'); }
 @font-face { @include custom-font('courier', 'Courier-Prime', 'normal'); }
 @font-face { @include custom-font('code', 'CODE-Light', 'normal'); }
 @font-face { @include custom-font('homiz', 'light', 'normal'); }
 @font-face { @include custom-font('glober', 'Glober-Thin-Free', 'normal'); }
 @font-face { @include custom-font('glober-b', 'Glober-SemiBold-Free', 'normal'); }
-@font-face { @include custom-font('koz', 'KozGoPr6N-Light', 'normal'); }
 
 @font-face {
 	font-family: 'icomoon';
