@@ -33,6 +33,8 @@ gem 'exifr'
 
 gem "wysiwyg-rails"
 
+gem 'mysql2'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'
