@@ -1,9 +1,11 @@
 body.gallery {
-  div.media-container {
+  section.media-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     margin-top: 2em;
+    padding: 0 2em;
+    padding-bottom: 3em;
     $media: camcos1, camcos2, camcos3, ic3, apicon, pearson5, workshop, pearson1, pearson4, pearson3, pearson2, hsevent, pinger, awards2, awards3, awards1;
     @each $medium in $media {
 

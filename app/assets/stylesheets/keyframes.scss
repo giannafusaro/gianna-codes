@@ -1,0 +1,195 @@
+////////////////////////////////////////////////////////////////////////////////
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+@keyframes change-color-outer {
+  0% {
+    fill: #5BD59B;
+    stroke: #5BD59B;
+  }
+  20% {
+    fill: #428CBD;
+    stroke: #428CBD;
+  }
+  40% {
+    fill: #945BD5;
+    stroke: #945BD5;
+  }
+  100% {
+    fill: #f06d6c;
+    stroke: #f06d6c;
+
+  }
+  60% {
+     fill: #A33A39;
+     stroke: #A33A39;
+  }
+  80% {
+     fill: #F0723C;
+     stroke: #F0723C;
+  }
+}
+@keyframes change-color-inner {
+  0% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  20% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  40% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  100% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  60% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  80% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+}
+
+@keyframes change-color-contact-linkedin {
+  100% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  0% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  20% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  40% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  60% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  80% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+}
+@keyframes change-color-contact-email {
+  80% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  100% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  0% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  20% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  40% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  60% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+}
+@keyframes change-color-contact-github {
+  40% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  60% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
+  }
+  80% {
+    fill: #7b27d0;
+    stroke: #7b27d0;
+
+  }
+  100% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
+  }
+  0% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  20% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
+}
+
+@keyframes change-color-contact-email-outer {
+  80% {
+    fill: #5BD59B;
+    stroke: #5BD59B;
+  }
+  100% {
+    fill: #428CBD;
+    stroke: #428CBD;
+  }
+  0% {
+    fill: #945BD5;
+    stroke: #945BD5;
+  }
+  20% {
+    fill: #f06d6c;
+    stroke: #f06d6c;
+
+  }
+  40% {
+     fill: #A33A39;
+     stroke: #A33A39;
+  }
+  60% {
+     fill: #F0723C;
+     stroke: #F0723C;
+  }
+}
+
+$colors:
+#5BD59B, #8fdab4, #27d085,
+#27D085, #5bd59b, #15a96c,
+#f06d6c, #f0a5a5, #f5362e,
+#FF4136, #f87976, #fc1600,
+#A33A39, #b85d5d, #802723,
+#F2F285, #f4f2bc, #f0f549,
+#428CBD, #75a6c3, #2a6b9c,
+#29A34D, #43c265, #177c38,
+#C85B5A, #cf8c8c, #b93530,
+#1C4F70, #307095, #0d2e46,
+#6CF093, #a5f0b9, #2ef56f,
+#F0723C, #ed9778, #ed5306,
+#6BBD42, #92c375, #4c9c2a,
+#A9F2AA, #ddf8dc, #70f276,
+#945BD5, #b08fda, #7b27d0
+
+
+
+// "#6C7A89","#94979a","#4a5c72",
+// "#ABB7B7", "#cecece", "#83a5a6",
+// "#DADFE1","#fafafa", "#b5c5cd",
+// "#C8F7C5", "#f8fdf8", "#90f68d"

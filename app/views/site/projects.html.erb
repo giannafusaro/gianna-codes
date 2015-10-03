@@ -1,5 +1,5 @@
-<div class="projects-container">
+<section class="projects-container">
   <% @projects.each_with_index do |(path, content), index| %>
     <%= render partial: "project", locals: { path: path, content: content, index: index } %>
   <% end %>
-</div>
+</section>

@@ -1,6 +1,9 @@
 body.site.contact {
+  footer {
+    bottom: 0;
+  }
   section.contact {
-    margin-top: 2em;
+    margin-top: 4em;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -13,15 +16,28 @@ body.site.contact {
       }
     }
   }
-  svg.contact-icon {
-    height: 250px;
-    align-self: center;
-    animation: change-color-contact 10s cubic-bezier(.17,.67,.83,.67) infinite;
+  .contact-icon.linkedin {
+    animation: change-color-contact-linkedin 10s cubic-bezier(.17,.67,.83,.67) infinite;
     animation-play-state: paused;
     animation-direction: alternate;
   }
+  .contact-icon.email {
+    animation: change-color-contact-email 10s cubic-bezier(.17,.67,.83,.67) infinite;
+    animation-play-state: paused;
+    animation-direction: alternate;
+  }
+  .contact-icon.github {
+    animation: change-color-contact-github 10s cubic-bezier(.17,.67,.83,.67) infinite;
+    animation-play-state: paused;
+    animation-direction: alternate;
+  }
+  svg.contact-icon {
+    height: 250px;
+    align-self: center;
+
+  }
   svg.contact-icon.outer {
-    animation: change-color-contact-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
+    animation: change-color-contact-email-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
     animation-play-state: paused;
     animation-direction: alternate;
 
