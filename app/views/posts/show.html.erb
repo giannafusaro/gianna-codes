@@ -1,5 +1,5 @@
 <article class="post">
-  <div class="img-container">
+  <div id="img-container" class="img-container">
     <%= image_tag @post.img_url, class: "post-img" %>
   </div>
   <div class="content-container">
@@ -14,7 +14,7 @@
     <h2>
       <span class="date"><%= @post.date.strftime('%B %d, %Y') %></span>
       <span>•</span><%= @post.abstract %></h2>
-      
+
       <pre class="froala-view body"><%= "#{@post.body}".html_safe %></pre>
 
   </div>
