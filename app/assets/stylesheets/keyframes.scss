@@ -14,11 +14,7 @@
     fill: #945BD5;
     stroke: #945BD5;
   }
-  100% {
-    fill: #f06d6c;
-    stroke: #f06d6c;
 
-  }
   60% {
      fill: #A33A39;
      stroke: #A33A39;
@@ -26,6 +22,11 @@
   80% {
      fill: #F0723C;
      stroke: #F0723C;
+  }
+  100% {
+    fill: #f06d6c;
+    stroke: #f06d6c;
+
   }
 }
 @keyframes change-color-inner {
@@ -42,11 +43,7 @@
     stroke: #7b27d0;
 
   }
-  100% {
 
-     fill: #f5362e;
-     stroke: #f5362e;
-  }
   60% {
      fill: #802723;
      stroke: #802723;
@@ -54,14 +51,16 @@
   80% {
      fill: #ed5306;
      stroke: #ed5306;
+  }
+  100% {
+
+     fill: #f5362e;
+     stroke: #f5362e;
   }
 }
 
 @keyframes change-color-contact-linkedin {
-  100% {
-    fill: #27D085;
-    stroke: #27D085;
-  }
+
   0% {
     fill: #2a6b9c;
     stroke: #2a6b9c;
@@ -83,21 +82,16 @@
   80% {
      fill: #ed5306;
      stroke: #ed5306;
+  }
+  100% {
+    fill: #27D085;
+    stroke: #27D085;
   }
 }
 @keyframes change-color-contact-email {
-  80% {
-    fill: #27D085;
-    stroke: #27D085;
-  }
-  100% {
-    fill: #2a6b9c;
-    stroke: #2a6b9c;
-  }
   0% {
     fill: #7b27d0;
     stroke: #7b27d0;
-
   }
   20% {
 
@@ -111,9 +105,26 @@
   60% {
      fill: #ed5306;
      stroke: #ed5306;
+  }
+
+  80% {
+    fill: #27D085;
+    stroke: #27D085;
+  }
+  100% {
+    fill: #2a6b9c;
+    stroke: #2a6b9c;
   }
 }
 @keyframes change-color-contact-github {
+  0% {
+     fill: #802723;
+     stroke: #802723;
+  }
+  20% {
+     fill: #ed5306;
+     stroke: #ed5306;
+  }
   40% {
     fill: #27D085;
     stroke: #27D085;
@@ -131,26 +142,11 @@
 
      fill: #f5362e;
      stroke: #f5362e;
-  }
-  0% {
-     fill: #802723;
-     stroke: #802723;
-  }
-  20% {
-     fill: #ed5306;
-     stroke: #ed5306;
   }
 }
 
 @keyframes change-color-contact-email-outer {
-  80% {
-    fill: #5BD59B;
-    stroke: #5BD59B;
-  }
-  100% {
-    fill: #428CBD;
-    stroke: #428CBD;
-  }
+
   0% {
     fill: #945BD5;
     stroke: #945BD5;
@@ -167,6 +163,14 @@
   60% {
      fill: #F0723C;
      stroke: #F0723C;
+  }
+  80% {
+    fill: #5BD59B;
+    stroke: #5BD59B;
+  }
+  100% {
+    fill: #428CBD;
+    stroke: #428CBD;
   }
 }
 
