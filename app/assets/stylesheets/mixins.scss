@@ -6,18 +6,24 @@ $oran: 'homiz';
 // breakpoint
 ////////////////////////////////////////////////////////////////////////////////
 @mixin breakpoint($point) {
+
   @if $point == large {
-    @media (min-width: 64.375em) {
+    @media (min-width: 1024px) and (max-width: 1824px) {
       @content;
     }
   }
   @else if $point == medium {
-    @media (min-width: 50em) {
+    @media (min-width: 768px) and (max-width: 1023px) {
       @content;
     }
   }
   @else if $point == small {
-    @media (min-width: 37.5em) {
+    @media (min-width: 479px) and (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $point == xsmall {
+    @media (min-width: 350px) and (max-width: 766px) {
       @content;
     }
   }

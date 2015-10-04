@@ -1,104 +1,108 @@
-.post-img {
-  width: 100%;
-}
-article.post {
 
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: rgba(255, 255, 255, 0.67);
-  position: relative;
-  border-radius: 6px;
-  border: 1px solid #e7e7e7;
-  border-bottom: 1px solid darken(#E7E7E7, 3%);
-  h1,
-  h2,
-  .froala-view {
-
-    margin-left: auto;
-    margin-right: auto;
-    li {
-      list-style-type: initial;
-    }
-    ul {
-      padding: 0em 3em;
+body.posts,
+body.admin.posts {
+  @include breakpoint(large) {
+    article.post {
+      width: 80%;
+      margin: 0 0 0 inherit;
+      border-radius: 6px;
+      border: 1px solid #e7e7e7;
+      border-bottom: 1px solid darken(#E7E7E7, 3%);
     }
 
   }
-  h1,
-  h2,
-  span,
-  pre,
-  .author {
-    font-family: 'homiz';
-    letter-spacing: 1px;
-  }
-  .button_to {
-    width: 200px;
-    text-align: right;
-    right: 0;
-    position: absolute;
-    top: -40px;
-  }
-  pre {
-    white-space: pre-line;
-    font-size: 1.1em;
-  }
-  label {
-    float: left;
+  @include breakpoint(small) {
+    article.post {
+      width: 100%;
+    }
   }
 
-  h1 {
-    font-size: 3em;
-  }
-  h2 span:nth-child(2) {
-    padding-right: 0.4em;
-  }
-  p > img,
-  p,
-  h2 {
-    line-height: 28px;
-  }
-  p {
-    text-align: left;
-  }
-  .img-container {
-    height: 250px;
-    overflow: hidden;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-  }
-  .author {
-    font-size: 1em;
-    text-align: center;
+  // general post css
+  article.post {
+    margin: 2em auto 2em auto;
+    background-color: rgba(255, 255, 255, 0.67);
+    position: relative;
+
+
+    // banner image
+    .post-img {
+      width: 100%;
+    }
+    .froala-view {
+      margin: 0 auto 3em auto;
+      font-size: 1.1em;
+      li {
+        list-style-type: initial;
+      }
+      ul {
+        padding: 0em 3em;
+      }
+    }
+    h1,
+    h2,
+    span,
+    pre,
+    .author {
+      font-family: 'homiz';
+      letter-spacing: 1px;
+    }
+
+    pre {
+      white-space: pre-line;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+    .author {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      line-height: 28px;
+
+      .date {
+        font-family: 'glober-b';
+      }
+      span:nth-child(2) {
+        padding-right: 0.4em;
+      }
+    }
+    p {
+      margin: 0;
+      text-align: left;
+    }
+    .img-container {
+      height: 160px;
+      overflow: hidden;
+      border-top-left-radius: 6px; border-top-right-radius: 6px;
+    }
+
+    .button_to {
+      width: 200px;
+      text-align: right;
+      right: 0;
+      position: absolute;
+      top: -40px;
+    }
 
   }
-  .date {
-    font-size: 1em;
-    letter-spacing: 1px;
-    font-family: 'glober-b';
-  }
-}
-.post.preview {
 
-  margin-top: 3em;
-  margin-bottom: 2em;
-  width: 50em;
-  .button_to {
-    top: 160px;
+  // post preview css
+  .post.preview {
+
+    .button_to {
+      top: 160px;
+    }
+    h1,
+    .author {
+      text-align: left;
+    }
   }
-  .img-container {
-    height: 160px;
+  div.preview-content-container,
+  div.content-container {
+    padding: 0em 2em;
+    position: relative;
   }
-  h1 {
-    text-align: left;
-  }
-  .author {
-    text-align: left;
-  }
-}
-div.preview-content-container,
-div.content-container {
-  padding: 0em 5em;
-  position: relative;
 }

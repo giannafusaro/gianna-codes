@@ -1,11 +1,44 @@
 body.gallery {
+  section#media-container {
+    flex-flow: row wrap;
+  }
+  figure {
+    height: 300px;
+    width: 300px
+  }
+  iframe {
+    height: 300px;
+    width:300px;
+  }
+
+  @include breakpoint(large) {
+    section#media-container {
+      flex-flow: row wrap;
+    }
+    iframe {
+      height: 440px;
+      width: 100%;
+    }
+    figure {
+      height: 440px;
+    }
+    .half {
+      flex: 0 1 50%;
+    }
+    .quarter {
+      flex: 0 1 25%;
+    }
+    .third {
+      flex: 0 1 33.333333%;
+    }
+  }
   section.media-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 2em;
     padding: 0 2em;
     padding-bottom: 3em;
+
     $media: camcos1, camcos2, camcos3, ic3, apicon, pearson5, workshop, pearson1, pearson4, pearson3, pearson2, hsevent, pinger, awards2, awards3, awards1;
     @each $medium in $media {
 
@@ -19,16 +52,5 @@ body.gallery {
       }
     }
   }
-  figure {
-    height: 440px;
-  }
-  .half {
-    flex: 0 1 50%;
-  }
-  .quarter {
-    flex: 0 1 25%;
-  }
-  .third {
-    flex: 0 1 33.333333%;
-  }
+
 }

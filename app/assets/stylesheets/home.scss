@@ -1,12 +1,9 @@
 body.site.home {
-  footer {
-    bottom: 0;
-  }
+
   section.home {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap-reverse;
     justify-content: center;
-    height: 480px;
   }
   svg.gianna-icon {
     height: 300px;
@@ -17,25 +14,25 @@ body.site.home {
     font-family: 'homiz';
     &:after {
       content: "Hi, I'm Gianna.";
-      font-size: 2.5vw;
       position: absolute;
-      top: 2.5em;
       text-align: center;
-      width: 100%;
+      font-size: 2em;
+      right: 2.3em;
+      top: 2em;
     }
     &:before {
+      top: 6em;
+      text-align: center;
+      right: 1em;
+      line-height: 1.9em;
+      font-size: 1em;
+      width: 18em;
       position: absolute;
       content: "Welcome to gianna codes, my portfolio showcasing how I spend most of my time. I love what I do, mostly because the realm of software exists at the nexus of creativity and logic. Thanks for stopping by!";
-      top: 8em;
-      text-align: center;
-      right: 2.5em;
-      line-height: 1.9em;
-      font-size: 1.25vw;
-      width: 22vw;
     }
   }
   i#dialogue-bubble {
-    font-size: 28vw;
+    font-size: 20em;
     color: #ddd;
 
   }

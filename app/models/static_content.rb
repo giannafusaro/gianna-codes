@@ -4,27 +4,27 @@ class StaticContent
   ################################################################################
 
   PROJECTS = {
-    'camcos.jpg' => {
+    'camcos1.jpg' => {
       title: 'CAMCOS presentation',
       subtitle: 'NASA Ames Sponsored Research Project for SJSU Center for Applied Mathematics, Computation and Statistics',
       link: 'http://docs.google.com/presentation/d/1JIn8F6iX8oiSq-atBk6yh4VomD40Inf3GeRIxAUlMdU/edit?usp=sharing'
     },
-    'presentation2d_bayseian_components.jpg' => {
+    'camcos2.jpg' => {
       title: 'CAMCOS report',
       subtitle: 'NASA Ames Sponsored Research Project for SJSU Center for Applied Mathematics, Computation and Statistics',
       link: 'http://www.slideshare.net/GiannaFusaro/writtenreportmath203v2'
     },
-    'isports-bg.jpg' => {
+    'isports.jpg' => {
       title: 'iSportsDevelopment',
       subtitle: 'Hockey coach-student video conferencing',
       link: 'http://isportsdevelopment.com'
     },
-    'ottos.png' => {
+    'ottos.jpg' => {
       title: 'Ottos Appliance Service, Inc.',
       subtitle: 'Appliance business static webpage',
       link: 'http://ottosappliance.com'
     },
-    'superpups.png' => {
+    'superpups.jpg' => {
       title: 'Super Pups',
       subtitle: 'Dog grooming salon static webpage',
       link: 'http://www.superpups.biz'
@@ -39,12 +39,12 @@ class StaticContent
       subtitle: 'Mock appointment scheduling',
       link: 'https://github.com/giannafusaro/ComputerRepairStore'
     },
-    'pearson-markers.jpg' => {
+    'pearson.jpg' => {
       title: 'STEM NOW: Inspiring Women to Become Technology Designers',
       subtitle: 'An article I wrote for Pearson Education',
       link: 'http://www.pearsoned.com/education-blog/stem-now-inspiring-women-to-become-technology-designers/'
     },
-    'stemnow.png' => {
+    'stem-now.jpg' => {
       title: 'STEM NOW',
       subtitle: 'SJSU organization to promote diversity in tech',
       link: 'http://www.stem-now.org/'

@@ -72,12 +72,12 @@ section {
   pointer-events: none;
 }
 a.nav-logo {
-  // flex: 0 1 40%;
+
   position: absolute;
-  height: 40px;
-  width: 40%;
+  width: 50%;
   top: -5em;
-  left: 30%;
+  margin-left: 25%;
+  margin-right: 25%
 }
 
 figure,

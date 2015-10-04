@@ -1,4 +1,19 @@
 body.site.projects {
+  $height: 350px;
+  $width: 100%;
+
+  @include breakpoint(small) {
+    $height: 350px;
+    $width: 100%;
+  }
+  @include breakpoint(medium) {
+    $height: 350px;
+    $width: 350px;
+  }
+  @include breakpoint(large) {
+    $height: 350px;
+    $width: 350px;
+  }
   .projects-container {
     display: flex;
     flex-flow: row wrap;
@@ -12,42 +27,33 @@ body.site.projects {
     opacity: 0.9;
     transition: opacity 0.35s;
     position: absolute;
-    width: 350px;
-    height: 350px;
-    -webkit-filter: invert(0.2);
-
-    top: 0;
-    left: 0;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 100%;
+    width: 100%;
   }
   figcaption {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.25em;
     backface-visibility: hidden;
     &:before {
       position: absolute;
-      top: 30px;
-      right: 30px;
-      bottom: 30px;
-      left: 30px;
+      top: 30px; right: 30px; bottom: 30px; left: 30px;
       border: 2px solid #fff;
       box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
       content: '';
       opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
       transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: scale3d(1.4,1.4,1);
       transform: scale3d(1.4,1.4,1);
     }
   }
   a.project-link {
-    height: 350px;
-    width: 350px;
+    height: $height;
+    width: $width;
     z-index: 5;
     position: absolute;
     top: 0; bottom: 0; left:0; right: 0;
@@ -56,13 +62,9 @@ body.site.projects {
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 350px;
-    min-width: 350px;
-    max-width: 350px;
-    max-height: 350px;
-    width: 48%;
     background: #101010;
-
+    width: $width;
+    height: $height;
 
     &:hover,
     &:focus {
@@ -73,9 +75,7 @@ body.site.projects {
         opacity: 0.4;
       }
       h2 {
-
         transform: scale(0.9) translateY(-3em);
-        // padding: 0em 1em;
       }
       figcaption:before,
       p {
@@ -97,11 +97,9 @@ body.site.projects {
   h2 {
     transition: transform 0.35s;
     margin: 50% 5% -50px 5%;
-    // font-family: 'glober';
     font-family: 'code';
     text-shadow: 1px 0px 1px white;
     letter-spacing: 2px;
     font-size: larger;
-    // padding: 3em 1em;
   }
 }
