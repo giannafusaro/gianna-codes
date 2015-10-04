@@ -4,5 +4,5 @@
     <h2><span><%= content[:title] %></span></h2>
     <p><%= "#{content[:subtitle]}" %></p>
   </figcaption>
-  <%= link_to("",content[:path], class: "project-link") %>
+  <%= link_to("",content[:link], class: "project-link", target: "_blank") %>
 </figure>
