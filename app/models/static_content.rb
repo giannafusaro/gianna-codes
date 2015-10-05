@@ -22,7 +22,7 @@ class StaticContent
     'ottos.jpg' => {
       title: 'Ottos Appliance Service, Inc.',
       subtitle: 'Appliance business static webpage',
-      link: 'http://ottosappliance.com'
+      link: 'http://www.ottosappliance.com'
     },
     'superpups.jpg' => {
       title: 'Super Pups',

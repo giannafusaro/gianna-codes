@@ -61,14 +61,13 @@ section {
 }
 .nav-item:before {
   position: absolute;
-  top: -20%;
-  left: 50%;
+  top: -20%; left: 50%;
   color: transparent;
   content: '.';
   text-shadow: 0 0 transparent;
   font-size: 2em;
   transition: text-shadow 0.3s, color 0.3s;
-  transform: translateX(-50%);
+  @include transform(translateX(-50%));
   pointer-events: none;
 }
 a.nav-logo {
@@ -88,22 +87,22 @@ figure,
 
 #svg-polygon-outer,
 #svg-path-inner {
-  animation: change-color-inner 10s cubic-bezier(.17,.67,.83,.67) infinite;
-  animation-play-state: paused;
-  animation-direction: alternate;
+  @include animation(change-color-inner 10s cubic-bezier(.17,.67,.83,.67) infinite);
+  @include animation-play-state(paused);
+  @include animation-direction(alternate);
 }
 #svg-path-outer,
 #svg-polygon-inner {
-  animation: change-color-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
-  animation-play-state: paused;
-  animation-direction: alternate;
+  @include animation(change-color-outer 10s cubic-bezier(.17,.67,.83,.67) infinite);
+  @include animation-play-state(paused);
+  @include animation-direction(alternate);
 }
 .nav-logo:hover {
   #svg-polygon-outer,
   #svg-path-inner,
   #svg-path-outer,
   #svg-polygon-inner {
-  animation-play-state: running;
+  @include animation-play-state(running);
 }}
 
 ////////////////////////////////////////////////////////////////////////////////

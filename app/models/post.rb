@@ -3,6 +3,6 @@ class Post < ActiveRecord::Base
 
   private
     def create_url_title
-      self.url_title = self.title.downcase.gsub(' ', '-')
+      self.url_title = self.title.parameterize
     end
 end

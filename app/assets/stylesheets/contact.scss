@@ -8,25 +8,25 @@ body.site.contact {
       display: flex;
       &:hover {
         svg.contact-icon, svg.contact-icon.outer {
-          animation-play-state: running;
+          @include animation-play-state(running);
         }
       }
     }
   }
   .contact-icon.linkedin {
-    animation: change-color-contact-linkedin 10s cubic-bezier(.17,.67,.83,.67) infinite;
-    animation-play-state: paused;
-    animation-direction: alternate;
+    @include animation(change-color-contact-linkedin 10s cubic-bezier(.17,.67,.83,.67) infinite);
+    @include animation-play-state(paused);
+    @include animation-direction(alternate);
   }
   .contact-icon.email {
-    animation: change-color-contact-email 10s cubic-bezier(.17,.67,.83,.67) infinite;
-    animation-play-state: paused;
-    animation-direction: alternate;
+    @include animation(change-color-contact-email 10s cubic-bezier(.17,.67,.83,.67) infinite);
+    @include animation-play-state(paused);
+    @include animation-direction(alternate);
   }
   .contact-icon.github {
-    animation: change-color-contact-github 10s cubic-bezier(.17,.67,.83,.67) infinite;
-    animation-play-state: paused;
-    animation-direction: alternate;
+    @include animation(change-color-contact-github 10s cubic-bezier(.17,.67,.83,.67) infinite);
+    @include animation-play-state(paused);
+    @include animation-direction(alternate);
   }
   svg.contact-icon {
     height: 250px;
@@ -34,9 +34,9 @@ body.site.contact {
 
   }
   svg.contact-icon.outer {
-    animation: change-color-contact-email-outer 10s cubic-bezier(.17,.67,.83,.67) infinite;
-    animation-play-state: paused;
-    animation-direction: alternate;
+    @include animation(change-color-contact-email-outer 10s cubic-bezier(.17,.67,.83,.67) infinite);
+    @include animation-play-state(paused);
+    @include animation-direction(alternate);
 
   }
 }

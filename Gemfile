@@ -33,7 +33,7 @@ gem 'tinymce-rails'
 
 gem 'mysql2', '~> 0.3.20'
 
-gem 'fast_seeder'
+gem 'bourbon'
 
 group :production do
   # Use Unicorn as the app server
