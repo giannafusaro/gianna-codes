@@ -10,4 +10,7 @@ class SiteController < ApplicationController
   end
   def contact
   end
+  def sf_map
+    render layout: false
+  end
 end
