@@ -1,4 +1,4 @@
-APP_PATH = "/srv/gianna-codes"
+APP_PATH = "/srv/gianna-codes/current"
 
 ##############################################
 # Basic Configuration
@@ -8,7 +8,7 @@ APP_PATH = "/srv/gianna-codes"
 working_directory APP_PATH
 
 # PID file location
-pid APP_PATH + "/tmp/unicorn.pid"
+pid APP_PATH + "/tmp/pids/unicorn.pid"
 
 # Logging
 stderr_path APP_PATH + "/log/unicorn.stderr.log"
@@ -16,11 +16,11 @@ stdout_path APP_PATH + "/log/unicorn.stderr.log"
 
 # Adds an address to the existing listener set. May be specified more than once. address may be an Integer port number for a TCP port, an
 # "IP_ADDRESS:PORT" for TCP listeners or a pathname for UNIX domain sockets.
-listen APP_PATH + "/tmp/unicorn.sock", backlog: 64
+listen APP_PATH + "/tmp/sockets/unicorn.sock", backlog: 64
 
 # Sets the current number of worker processes. Each worker process will serve exactly one client at a time.
 # You can increment or decrement this value at runtime using interrupts (http://unicorn.bogomips.org/SIGNALS.html).
-worker_processes 4 
+worker_processes 4
 
 # Sets the timeout of worker processes to seconds. Workers handling the request/app.call/response cycle taking longer than this time
 # period will be forcibly killed (via SIGKILL). This timeout is enforced by the master process itself and not subject to the scheduling
