@@ -12,7 +12,7 @@ pid APP_PATH + "/tmp/pids/unicorn.pid"
 
 # Logging
 stderr_path APP_PATH + "/log/unicorn.stderr.log"
-stdout_path APP_PATH + "/log/unicorn.stderr.log"
+stdout_path APP_PATH + "/log/unicorn.stdout.log"
 
 # Adds an address to the existing listener set. May be specified more than once. address may be an Integer port number for a TCP port, an
 # "IP_ADDRESS:PORT" for TCP listeners or a pathname for UNIX domain sockets.

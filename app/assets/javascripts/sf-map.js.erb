@@ -35,9 +35,9 @@ $(document).ready(function() {
   var features = svg.append("g");
 
   queue()
-    .defer(d3.json, "/assets/land_usages_tiles.json")
-    .defer(d3.json, "/assets/highroad_tiles.json")
-    .defer(d3.json, "/assets/routes.json")
+    .defer(d3.json, "<%= asset_url('land_usages_tiles.json') %>")
+    .defer(d3.json, "<%= asset_url('highroad_tiles.json') %>")
+    .defer(d3.json, "<%= asset_url('routes.json') %>")
     .await(ready);
 
   function ready(error, land, highroads, sfj) {
