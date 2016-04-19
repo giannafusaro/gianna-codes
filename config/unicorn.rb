@@ -20,7 +20,7 @@ listen APP_PATH + "/tmp/sockets/unicorn.sock", backlog: 64
 
 # Sets the current number of worker processes. Each worker process will serve exactly one client at a time.
 # You can increment or decrement this value at runtime using interrupts (http://unicorn.bogomips.org/SIGNALS.html).
-worker_processes 4
+worker_processes 2
 
 # Sets the timeout of worker processes to seconds. Workers handling the request/app.call/response cycle taking longer than this time
 # period will be forcibly killed (via SIGKILL). This timeout is enforced by the master process itself and not subject to the scheduling
