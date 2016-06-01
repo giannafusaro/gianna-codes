@@ -1,3 +1,5 @@
+$footer-height: 1.8em;
+
 a {
   text-decoration: none;
   color: #333;
@@ -26,16 +28,21 @@ h1 {
 }
 
 section {
-  padding-bottom: 1.8em;
+  padding-bottom: 4em;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // Nav
 ////////////////////////////////////////////////////////////////////////////////
 .nav-container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  @include display(flex);
+  @include flex-flow(row nowrap);
+  @include justify-content(space-around);
   position: relative;
   margin-top: 4em;
   z-index: 25;
@@ -46,7 +53,7 @@ section {
   align-self: center;
   font-family: "homiz";
   font-size: 1.8em;
-  transition: color 0.3s;
+  @include transition(color 0.3s);
   position: relative;
 }
 
@@ -66,7 +73,7 @@ section {
   content: '.';
   text-shadow: 0 0 transparent;
   font-size: 2em;
-  transition: text-shadow 0.3s, color 0.3s;
+  @include transition(text-shadow 0.3s, color 0.3s);
   @include transform(translateX(-50%));
   pointer-events: none;
 }
@@ -109,20 +116,18 @@ figure,
 // Footer
 ////////////////////////////////////////////////////////////////////////////////
 footer {
-  height: 1.8em;
-  position: absolute;
+  height: $footer-height;
+  @include position(absolute, null 0 0 0);
   overflow: hidden;
-  left: 0;
-  right: 0;
   border: solid 1px #C3C2C2;
   background-color: rgba(21, 20, 20, 0.09);
   color: #333;
   margin: 0;
   padding: 0;
   div {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-flow(row nowrap);
     height: 100%;
   }
   i {
@@ -132,7 +137,7 @@ footer {
     padding-right: .25em;
   }
   span, i {
-    align-self: center;
+    @include align-self(center);
     font-family: 'courier';
     font-size: 1em;
   }

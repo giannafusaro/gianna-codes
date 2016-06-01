@@ -1,7 +1,7 @@
 body.site.home {
 
   section.home {
-    display: flex;
+    @include display(flex);
     flex-flow: row wrap-reverse;
     justify-content: center;
   }
@@ -18,17 +18,17 @@ body.site.home {
       text-align: center;
       font-size: 2em;
       right: 2.3em;
-      top: 2em;
+      top: 2.5em;
     }
     &:before {
-      top: 6em;
+      top: 8em;
       text-align: center;
       right: 1em;
       line-height: 1.9em;
       font-size: 1em;
       width: 18em;
       position: absolute;
-      content: "Hi! I'm Gianna and this is my portfolio. Thanks for stopping by!";
+      content: "Welcome to my portfolio/test bed for stuff I think is interesting and want to implement. Thanks for stopping by!";
     }
   }
   i#dialogue-bubble {

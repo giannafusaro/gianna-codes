@@ -19,29 +19,32 @@
   </script>
 </head>
 <body class="<%= "#{controller.controller_path.gsub('/', ' ')} #{controller.action_name}" %>">
-  <nav>
-    <div class="nav-container">
-      <%= link_to home_path, class: 'nav-logo' do %>
-        <%= inline_svg('gianna-codes-lightning-green.svg', class: "logo") %>
-      <% end %>
-      <% if current_admin %>
-        <%= render partial: 'admin/navbar' %>
-      <% else %>
-        <%= render partial: 'site/navbar' %>
-      <% end %>
+  <div class="page-wrapper">
+    <nav>
+      <div class="nav-container">
+        <%= link_to home_path, class: 'nav-logo' do %>
+          <%= inline_svg('gianna-codes-lightning-green.svg', class: "logo") %>
+        <% end %>
+        <% if current_admin %>
+          <%= render partial: 'admin/navbar' %>
+        <% else %>
+          <%= render partial: 'site/navbar' %>
+        <% end %>
 
-    </div>
-  </nav>
+      </div>
+    </nav>
 
-<%= yield %>
+    <%= yield %>
 
-<footer>
-  <div>
-    <i class="fa fa-copyright"></i>
-    <span><%= Time.now.year %></span>
-    <span>gianna</span>
-    <span>fusaro</span>
+    <footer>
+      <div>
+        <i class="fa fa-copyright"></i>
+        <span><%= Time.now.year %></span>
+        <span>gianna</span>
+        <span>fusaro</span>
+      </div>
+    </footer>
   </div>
-</footer>
+
 </body>
 </html>
