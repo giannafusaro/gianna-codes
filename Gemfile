@@ -29,6 +29,7 @@ gem 'inline_svg'
 gem 'tinymce-rails'
 gem 'mysql2', '~> 0.3.20'
 gem 'bourbon'
+gem 'pry'
 
 group :production do
   # Use Unicorn as the app server

@@ -116,14 +116,15 @@ figure,
 // Footer
 ////////////////////////////////////////////////////////////////////////////////
 footer {
-  height: $footer-height;
   @include position(absolute, null 0 0 0);
+  height: $footer-height;
+  margin-top: -($footer-height);
+  padding: 0;
   overflow: hidden;
   border: solid 1px #C3C2C2;
   background-color: rgba(21, 20, 20, 0.09);
   color: #333;
-  margin: 0;
-  padding: 0;
+
   div {
     @include display(flex);
     @include justify-content(center);
