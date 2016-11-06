@@ -1,4 +1,3 @@
-
 body.posts,
 body.admin.posts {
   @include breakpoint(large) {
@@ -23,18 +22,20 @@ body.admin.posts {
 
   // general post css
   article.post {
-    margin: 2em auto 2em auto;
+    margin: 2em auto 0em auto;
     background-color: rgba(255, 255, 255, 0.67);
     position: relative;
-
 
     // banner image
     .post-img {
       width: 100%;
     }
-    .froala-view {
+    .body {
+      font-family: 'Open Sans';
       margin: 0 auto 3em auto;
       font-size: 1.1em;
+      letter-spacing: 1px;
+      line-height: 24px;
       li {
         list-style-type: initial;
       }
@@ -44,7 +45,6 @@ body.admin.posts {
     }
     h1,
     h2,
-    span,
     pre,
     .author {
       font-family: 'homiz';
@@ -109,4 +109,100 @@ body.admin.posts {
     padding: 0em 2em;
     position: relative;
   }
+}
+
+/***********************************************/
+/* Embedded Gists                              */
+/***********************************************/
+
+.gist {
+  overflow: auto;
+
+  .gist-file {
+    border: 1px solid #3f4549 !important;
+    background-color: #2B2B2B;
+
+    .gist-data {
+      border: 0px;
+      background-color: inherit;
+      .blob-code {
+        font-size: 1.25em;
+      }
+      .highlight {
+        background-color: #2B2B2B;
+      }
+      .blob-code-inner {
+        color: #F4F1ED;
+        // white-space:normal;
+      }
+      .blob-num {
+        border: 0px;
+        background-color: #3f4549;
+        color: lighten(#3f4549, 20%);
+        font-size: 14px;
+      }
+      .pl-e, .pl-smi {
+        color: #fff;
+      }
+      .pl-en {
+        color: #8fc2ba;
+      }
+      .pl-c1 {
+        color: #81adc9;
+      }
+      .pl-k {
+        color: #af91bd;
+      }
+      .pl-v {
+        color: #f49f5c;
+      }
+      .pl-sr, .pl-s, .pl-pds {
+        color: #b4c978;
+      }
+      .pl-s1 {
+        color: #63ab66;
+      }
+    }
+  }
+}
+
+code:not([data-gist-id]) {
+  background-color: #f7f7f7;
+  border: 1px solid #3f4549;
+  padding: 2px 4px 4px;
+  font-size: 16px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+/***********************************************/
+/* Console                                     */
+/***********************************************/
+
+.console {
+  padding: 10px;
+  white-space: nowrap;
+  background: rgba(#000, 0.7);
+  font-family: 'Inconsolata';
+  border: 1px solid #3f4549;
+  color: #d0cfcf;
+  border-radius: 5px;
+  word-break: normal;
+  overflow-x: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  .g  { color: #b4c978; }
+  .gr { color: #97938c; font-style: italic; }
+  .p { color: #af91bd; }
+  .r { color: #c8484d; }
+  .w { color: #ffffff; }
+}
+
+div.console { margin: 35px 0px; }
+span.console {
+  padding: 5px 8px;
+  display: inline-block;
+  width: auto;
+  text-indent: 0px;
+  line-height: 14px;
+  vertical-align: bottom;
 }

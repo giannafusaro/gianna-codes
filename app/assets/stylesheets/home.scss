@@ -1,14 +1,15 @@
 body.site.home {
-
   section.home {
     @include display(flex);
     flex-flow: row wrap-reverse;
     justify-content: center;
   }
+
   svg.gianna-icon {
     height: 300px;
     align-self: center;
   }
+
   div#dialogue-bubble-container {
     position: relative;
     font-family: 'homiz';
@@ -31,9 +32,9 @@ body.site.home {
       content: "Welcome to my portfolio/test bed for stuff I think is interesting and want to implement. Thanks for stopping by!";
     }
   }
+
   i#dialogue-bubble {
     font-size: 20em;
     color: #ddd;
-
   }
 }

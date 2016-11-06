@@ -14,6 +14,5 @@
   <span class="label abstract"><%= f.label :abstract %></span>
   <span class="input-container abstract"><%= f.text_area :abstract, rows: 5 %></span>
 </div>
-<%= f.text_area :body, :class => "tinymce", :rows => 40 %>
-<%= tinymce %>
+<%= f.text_area :body, rows: 40, style: 'width: 90%;' %>
 <div class="submit-wrapper"><%= f.submit %><div>

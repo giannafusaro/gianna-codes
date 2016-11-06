@@ -30,6 +30,7 @@ gem 'tinymce-rails'
 gem 'mysql2', '~> 0.3.20'
 gem 'bourbon'
 gem 'pry'
+gem 'redcarpet'
 
 group :production do
   # Use Unicorn as the app server

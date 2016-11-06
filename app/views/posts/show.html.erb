@@ -7,15 +7,15 @@
 
     <h1><%= @post.title %></h1>
 
-
-    <div class="author">by:
-      <%= @post.author.upcase %></div>
+    <div class="author">by: <%= @post.author.upcase %></div>
 
     <h2>
       <span class="date"><%= @post.date.strftime('%B %d, %Y') %></span>
-      <span>•</span><%= @post.abstract %></h2>
+      <span>•</span>
+      <%= @post.abstract %>
+    </h2>
 
-      <pre class="froala-view body"><%= "#{@post.body}".html_safe %></pre>
+    <div class="body"><%= markdown @post.body %></div>
 
   </div>
 

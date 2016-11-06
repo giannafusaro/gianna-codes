@@ -1,11 +1,11 @@
 <article class="post">
- <div class="heading">
-  <div id="img-container" class="img-container">
-    <%= image_tag post.img_url, class: "post-img" %>
+  <div class="heading">
+    <div id="img-container" class="img-container">
+      <%= image_tag post.img_url, class: "post-img" %>
+    </div>
+    <h1><%= post.title %></h1>
+    <h2><%= post.abstract %></h2>
   </div>
-  <h1><%= post.title %></h1>
-  <h2><%= post.abstract %></h2>
-</div>
 
-<pre class="froala-view body"><%= "#{post.body}".html_safe %></pre>
+  <pre class="body"><%= markdown post.body %></pre>
 </article>

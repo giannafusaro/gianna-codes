@@ -34,6 +34,7 @@ section {
 .page-wrapper {
   min-height: 100%;
   position: relative;
+  padding-bottom: 75px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -78,12 +79,9 @@ section {
   pointer-events: none;
 }
 a.nav-logo {
-
   position: absolute;
   width: 50%;
   top: -5em;
-  margin-left: 25%;
-  margin-right: 25%
 }
 
 figure,
