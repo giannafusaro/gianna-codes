@@ -1,5 +1,5 @@
 ready = ->
-  $('[data-gist-id]').gist();
+  $('[data-gist-id]').gist() if $('[data-gist-id]').length
   $("#new_post").on("ajax:success", (e, data, status, xhr) ->
     $("#new_post").replaceWith xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
