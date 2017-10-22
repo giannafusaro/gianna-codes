@@ -30,7 +30,8 @@ gem 'mysql2', '~> 0.3.20'
 gem 'bourbon'
 gem 'pry'
 gem 'redcarpet'
-
+gem 'react_on_rails'
+gem "webpacker"
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'
