@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'hello_world', to: 'hello_world#index'
   root 'site#home', as: :home
   get '/projects' => 'site#projects', as: :projects
   get '/blog' => 'posts#index', as: :blog
