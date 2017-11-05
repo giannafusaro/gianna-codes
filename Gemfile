@@ -31,6 +31,8 @@ gem 'redcarpet'
 gem 'react_on_rails'
 gem "webpacker"
 gem 'libv8'
+gem 'discogs-wrapper'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'

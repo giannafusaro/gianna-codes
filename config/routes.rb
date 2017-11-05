@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/gallery' => 'site#gallery', as: :gallery
   get '/contact' => 'site#contact', as: :contact
   get '/sf-map' => 'site#sf_map', as: :sf_map
-  get '/beatles-lyrics' => 'site#beatles_lyrics', as: :beatles_lyrics
+  get '/beatles-songs' => 'site#beatles_songs', as: :beatles_songs
 
   match '/admin' => 'admin#login', via: [:get, :post], as: :login
   match '/logout' => 'admin#logout', via: [:get, :post], as: :logout

@@ -19,20 +19,25 @@ class SiteController < ApplicationController
     render layout: false
   end
 
-  def beatles_lyrics
+  def beatles_songs
     lyrics_path = Rails.root.join('app', 'assets', 'data', 'song-lyrics.json')
+    facts_path = Rails.root.join('app', 'assets', 'data', 'song-facts.json')
     lyrics_data = JSON.parse(File.read(lyrics_path))
+    facts_data = JSON.parse(File.read(facts_path))
+    @discogs = Discogs::Wrapper.new("Beatles", user_token: ENV['DISCOGS_KEY'])
     # TODO: incorporate facts, album info here.
     # [{title: title, lyric: lyric, label: label}]
-    @lyrics = lyrics_data.map do |k, v|
+    @songs = lyrics_data.map do |k, v|
       {
         title: k,
         lyric: v,
+        fact: facts_data[k],
         label: k.titleize,
         id: SecureRandom.uuid
       }
     end
-    @props = { lyrics: @lyrics }
+    @props = { songs: @songs }
     render layout: "beatles"
   end
+
 end

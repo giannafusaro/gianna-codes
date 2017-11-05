@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import { LYRICS_AUTOCOMPLETE, LYRICS_REQUEST } from '../constants/beatlesConstants';
+import { SONGS_AUTOCOMPLETE, SONGS_REQUEST } from '../constants/beatlesConstants';
 
-const lyrics = (state = '', action) => {
+const songs = (state = '', action) => {
   switch (action.type) {
-    case LYRICS_AUTOCOMPLETE:
+    case SONGS_AUTOCOMPLETE:
       return action.text;
-    case LYRICS_REQUEST:
-      return action.lyrics
+    case SONGS_REQUEST:
+      return action.songs
     default:
       return state;
   }
@@ -20,6 +20,6 @@ const lyrics = (state = '', action) => {
 //   }
 // };
 
-const beatlesReducer = combineReducers({ lyrics });
+const beatlesReducer = combineReducers({ songs });
 
 export default beatlesReducer;

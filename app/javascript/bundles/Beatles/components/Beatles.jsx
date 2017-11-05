@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Autocomplete from 'react-autocomplete';
+import SongAutocomplete from './SongAutocomplete';
 import BeatlesSong from './BeatlesSong';
 
 export default class Beatles extends React.Component {
   static propTypes = {
-    lyrics: PropTypes.array
+    songs: PropTypes.array
     // name: PropTypes.string.isRequired, // this is passed from the Rails view
   };
 
@@ -16,7 +16,7 @@ export default class Beatles extends React.Component {
     super(props);
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { lyrics: this.props.lyrics, value: '' };
+    this.state = { songs: this.props.songs, value: '' };
   }
 
   componentDidMount() {
@@ -27,15 +27,18 @@ export default class Beatles extends React.Component {
     this.setState({ name });
   };
 
-  maybeRenderLyrics = () => {
-    if (this.state.value != '') {
-      return (<BeatlesSong title={this.state.value} lyric={this.state.value} />)
+  maybeRenderSong = () => {
+    if (this.state.selectedSong) {
+      let title = this.state.selectedSong.label
+      let lyric = this.state.selectedSong.lyric
+      let fact = this.state.selectedSong.fact
+      return (<BeatlesSong title={title} lyric={lyric} fact={fact} />)
     }
   }
 
-  selectLyric = (value) => {
-    debugger
-    // setState({ value })
+  selectSong = (item) => {
+    this.setState({selectedSong: item})
+    console.log('SELECTED SONG CHANGED', item)
   }
 
   render() {
@@ -43,24 +46,8 @@ export default class Beatles extends React.Component {
       <div>
         <h1>Beatles</h1>
 
-        <Autocomplete
-          items={this.state.lyrics}
-          shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
-          getItemValue={item => item.label}
-          renderItem={(item, highlighted) =>
-            <div
-              key={item.id}
-              style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
-            >
-              {item.label}
-            </div>
-          }
-          value={this.state.value}
-          onChange={e => this.setState({ value: e.target.value })}
-          onSelect={value => this.selectLyric(value)}
-        />
-
-        {this.maybeRenderLyrics()}
+        <SongAutocomplete songs={this.props.songs} onSongSelect={this.selectSong} />
+        {this.maybeRenderSong()}
       </div>
     );
   }
