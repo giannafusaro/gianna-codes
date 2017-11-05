@@ -121,6 +121,9 @@ GEM
     pry (0.11.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-byebug (3.5.0)
+      byebug (~> 9.1)
+      pry (~> 0.10)
     public_suffix (3.0.0)
     rack (2.0.3)
     rack-proxy (0.6.2)
@@ -221,7 +224,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bourbon
-  byebug
   capistrano (~> 3.4)
   capistrano-rails
   capistrano-rbenv
@@ -234,6 +236,7 @@ DEPENDENCIES
   mini_racer
   mysql2 (~> 0.3.20)
   pry
+  pry-byebug
   rails (= 5.1)
   react_on_rails
   redcarpet

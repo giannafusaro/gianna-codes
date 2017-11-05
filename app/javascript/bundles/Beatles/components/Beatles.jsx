@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Autocomplete from 'react-autocomplete';
+import BeatlesSong from './BeatlesSong';
 
 export default class Beatles extends React.Component {
   static propTypes = {
-    name: PropTypes.string.isRequired, // this is passed from the Rails view
+    lyrics: PropTypes.array
+    // name: PropTypes.string.isRequired, // this is passed from the Rails view
   };
 
   /**
@@ -11,34 +14,53 @@ export default class Beatles extends React.Component {
    */
   constructor(props) {
     super(props);
-    console.log('HEY I HIT THE CONSTURCTOR')
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { name: this.props.name };
+    this.state = { lyrics: this.props.lyrics, value: '' };
+  }
+
+  componentDidMount() {
+    // debugger
   }
 
   updateName = (name) => {
     this.setState({ name });
   };
 
+  maybeRenderLyrics = () => {
+    if (this.state.value != '') {
+      return (<BeatlesSong title={this.state.value} lyric={this.state.value} />)
+    }
+  }
+
+  selectLyric = (value) => {
+    debugger
+    // setState({ value })
+  }
+
   render() {
     return (
       <div>
-        <h3>
-          Hello, {this.state.name}!
-        </h3>
-        <hr />
-        <form >
-          <label htmlFor="name">
-            Say hello to:
-          </label>
-          <input
-            id="name"
-            type="text"
-            value={this.state.name}
-            onChange={(e) => this.updateName(e.target.value)}
-          />
-        </form>
+        <h1>Beatles</h1>
+
+        <Autocomplete
+          items={this.state.lyrics}
+          shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
+          getItemValue={item => item.label}
+          renderItem={(item, highlighted) =>
+            <div
+              key={item.id}
+              style={{ backgroundColor: highlighted ? '#eee' : 'transparent'}}
+            >
+              {item.label}
+            </div>
+          }
+          value={this.state.value}
+          onChange={e => this.setState({ value: e.target.value })}
+          onSelect={value => this.selectLyric(value)}
+        />
+
+        {this.maybeRenderLyrics()}
       </div>
     );
   }

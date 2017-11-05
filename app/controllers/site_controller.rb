@@ -20,7 +20,19 @@ class SiteController < ApplicationController
   end
 
   def beatles_lyrics
-    @some_props = { name: "Stranger" }
+    lyrics_path = Rails.root.join('app', 'assets', 'data', 'song-lyrics.json')
+    lyrics_data = JSON.parse(File.read(lyrics_path))
+    # TODO: incorporate facts, album info here.
+    # [{title: title, lyric: lyric, label: label}]
+    @lyrics = lyrics_data.map do |k, v|
+      {
+        title: k,
+        lyric: v,
+        label: k.titleize,
+        id: SecureRandom.uuid
+      }
+    end
+    @props = { lyrics: @lyrics }
     render layout: "beatles"
   end
 end
