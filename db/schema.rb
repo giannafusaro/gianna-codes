@@ -12,24 +12,24 @@
 
 ActiveRecord::Schema.define(version: 20180217070808) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "username",        null: false
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table "admins", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "username", null: false
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "title",                                    null: false
-    t.date     "date"
-    t.string   "author"
-    t.text     "abstract",   limit: 65535
-    t.text     "body",       limit: 65535
-    t.text     "img_url",    limit: 65535
-    t.string   "url_title"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.boolean  "publish",                  default: false
+  create_table "posts", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "title", null: false
+    t.date "date"
+    t.string "author"
+    t.text "abstract"
+    t.text "body"
+    t.text "img_url"
+    t.string "url_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "published", default: false
   end
 
 end
