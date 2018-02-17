@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/gallery' => 'site#gallery', as: :gallery
   get '/contact' => 'site#contact', as: :contact
   get '/sf-map' => 'site#sf_map', as: :sf_map
-  
+
   match '/admin' => 'admin#login', via: [:get, :post], as: :login
   match '/logout' => 'admin#logout', via: [:get, :post], as: :logout
   get '/post/:url_title' => 'posts#show', as: :post
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :posts
     get '/home' => 'site#home', as: :home
+    get '/posts/:id/preview' => 'posts#preview', as: :preview
+    patch '/posts/:id/post_to_preview' => 'posts#post_to_preview', as: :post_to_preview
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

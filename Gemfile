@@ -31,6 +31,9 @@ gem 'bourbon', '~> 4.2.7'
 gem 'pry'
 gem 'redcarpet'
 gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'redis', '~> 3.0'
+gem 'sidekiq'
+
 
 group :production do
   # Use Unicorn as the app server
@@ -49,4 +52,5 @@ group :development, :test do
   gem "capistrano-rails"
   gem "capistrano-rbenv"
   gem "capistrano-unicorn-nginx"
+  gem 'puma'
 end

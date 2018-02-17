@@ -1,0 +1,24 @@
+<h1>Preview</h1>
+
+<article class="post">
+  <div id="img-container" class="img-container">
+    <%= image_tag @post.img_url, class: "post-img" %>
+  </div>
+  <div class="content-container">
+    <%= button_to "edit", edit_admin_post_path(@post.id), method: 'get' if current_admin %>
+
+    <h1 data-post="title"><%= @post.title %></h1>
+
+    <div data-post="author" class="author">by: <%= @post.author.upcase %></div>
+
+    <h2>
+      <span data-post="date" class="date"><%= @post.date.strftime('%B %d, %Y') %></span>
+      <span>•</span>
+      <span data-post="abstract"><%= @post.abstract %></span>
+    </h2>
+
+    <div data-post="body" class="body"><%= markdown @post.body %></div>
+
+  </div>
+
+</article>

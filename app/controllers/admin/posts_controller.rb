@@ -54,6 +54,18 @@ class Admin::PostsController < ApplicationController
     end
   end
 
+  def preview
+    @post = Post.find params[:id]
+  end
+
+  def post_to_preview
+    post = Post.new(post_params)
+    post.abstract = Markdown.new(post_params[:abstract]).to_html
+    post.body = Markdown.new(post_params[:body]).to_html
+    PreviewWorker.perform_async(post.to_json)
+    render json: 200
+  end
+
   private
 
   def post_params

@@ -3,9 +3,9 @@
     <div id="img-container" class="img-container">
       <%= image_tag post.img_url, class: "post-img" %>
     </div>
-    <h1><%= post.title %></h1>
-    <h2><%= post.abstract %></h2>
+    <h1 data-post="title"><%= post.title %></h1>
+    <h2 data-post="abstract"><%= post.abstract %></h2>
   </div>
 
-  <pre class="body"><%= markdown post.body %></pre>
+  <pre class="body" data-post="body"><%= markdown post.body %></pre>
 </article>
