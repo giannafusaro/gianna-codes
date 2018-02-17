@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :forward_login, only: :login
+  before_action :forward_login, only: :login
 
   def login
     if request.post?

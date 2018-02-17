@@ -17,5 +17,4 @@
 //= require d3-map/topojson
 //= require d3-map/lodash
 //= require d3-map/queue.v1.min
-//= require tinymce
 //= require_tree .

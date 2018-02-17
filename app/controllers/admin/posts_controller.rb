@@ -1,5 +1,5 @@
 class Admin::PostsController < ApplicationController
-  before_filter :require_admin
+  before_action :require_admin
 
   def index
     @posts = Post.all
@@ -12,6 +12,9 @@ class Admin::PostsController < ApplicationController
 
   def create
     @post = Post.new post_params
+    @post.abstract = Markdown.new(post_params[:abstract]).to_html
+    @post.body = Markdown.new(post_params[:body]).to_html
+
     if @post.save
       flash[:notice] = 'Post created successfully!'
       redirect_to admin_home_path
@@ -29,6 +32,8 @@ class Admin::PostsController < ApplicationController
 
   def update
     @post = Post.find params[:id]
+    @post.abstract = Markdown.new(post_params[:abstract]).to_html
+    @post.body = Markdown.new(post_params[:body]).to_html
     if @post.update_attributes(post_params)
       flash[:notice] = 'Schweeet - update successful!'
       redirect_to admin_posts_path
