@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -48,7 +48,7 @@ group :development, :test do
   gem 'byebug'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem "capistrano", "~> 3.4"
+  gem "capistrano", "~> 3.4.1"
   gem "capistrano-rails"
   gem "capistrano-rbenv"
   gem "capistrano-unicorn-nginx"
