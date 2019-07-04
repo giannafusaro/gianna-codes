@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.published.order(:date)
+    @posts = Post.all.published.order(:position)
   end
   def show
     @post = Post.published.find_by(url_title: params[:url_title])

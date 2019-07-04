@@ -26,7 +26,6 @@ class Admin::PostsController < ApplicationController
 
   def edit
     @post = Post.find params[:id]
-    logger.debug @post.inspect
     @post
   end
 
@@ -69,6 +68,6 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:id, :title, :date, :author, :abstract, :body, :url_title, :img_url)
+    params.require(:post).permit(:id, :title, :date, :author, :abstract, :body, :url_title, :img_url, :published, :position)
   end
 end

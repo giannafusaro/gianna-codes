@@ -1,4 +1,10 @@
 <div class="header">
+  <span class="label published"><%= f.label :published %></span>
+  <span class="label position"><%= f.label :position %></span>
+
+  <span class="input-container published"><%= f.check_box :published %></span>
+  <span class="input-container position"><%= f.number_field :position %></span>
+
   <span class="label title"><%= f.label :title %></span>
 	<span class="label img-url"><%= f.label :img_url %></span>
 

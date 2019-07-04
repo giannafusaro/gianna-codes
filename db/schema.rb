@@ -10,11 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180217070808) do
+ActiveRecord::Schema.define(version: 20190704175025) do
 
   create_table "admins", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string "username", null: false
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "albums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text "title"
+    t.integer "year"
+    t.date "release_date"
+    t.string "genres"
+    t.json "extraartists"
+    t.json "tracklist"
+    t.text "labels"
+    t.string "country"
+  end
+
+  create_table "albums_songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "song_id", null: false
+    t.integer "album_id", null: false
+    t.string "position"
+  end
+
+  create_table "facts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "category"
+    t.text "content"
+    t.string "subject_type"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,7 +55,22 @@ ActiveRecord::Schema.define(version: 20180217070808) do
     t.string "url_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order", default: 0
     t.boolean "published", default: false
+    t.integer "position", default: 0
+  end
+
+  create_table "songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.text "title"
+    t.text "lyrics"
+    t.text "facts_copy"
+    t.string "duration"
+    t.text "written_by"
+    t.json "performed_by"
+    t.string "producer"
+    t.string "engineer"
+    t.date "recorded"
+    t.string "studio"
   end
 
 end

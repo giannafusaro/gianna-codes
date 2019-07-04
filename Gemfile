@@ -33,7 +33,7 @@ gem 'redcarpet'
 gem 'json', github: 'flori/json', branch: 'v1.8'
 gem 'redis', '~> 3.0'
 gem 'sidekiq'
-
+gem 'ffi', '1.9.18'
 
 group :production do
   # Use Unicorn as the app server
