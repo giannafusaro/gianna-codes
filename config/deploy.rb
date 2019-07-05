@@ -44,6 +44,11 @@ set :ssh_options, {
 set :rbenv_type, :user
 set :rbenv_ruby, File.read('.ruby-version').strip
 
+set :nginx_server_name, 'gianna.codes'
+set :nginx_use_ssl, true
+set :nginx_ssl_cert_local_path, '/etc/ssl/certs/gianna.codes.crt.pem'
+set :nginx_ssl_cert_key_local_path, '/etc/ssl/certs/gianna.codes.key.pem'
+
 namespace :deploy do
 
   after :restart, :clear_cache do
